@@ -1,14 +1,13 @@
-"}""
-Transducer-Absence Class (TAC) engine
-=====================================
+"""Transducer-Absence Class (TAC) engine.
+
 Session: 2026-08-28T13:40:00-EDT
 Author of session synthesis: Haley Bird (archive) / autonomous research agent
 
 This module does not claim a new physical mechanism. It classifies
 scientific problems that share a structure:
 
-    robust-or-claimed EFFECT  +  unlocated CONVERTER  +  optional
-    industrial/policy action preceding mechanism  +  optional
+    robust-or-claimed EFFECT + unlocated CONVERTER + optional
+    industrial/policy action preceding mechanism + optional
     homonymic collapse of unequal claims under one popular name.
 """
 from __future__ import annotations
@@ -152,7 +151,7 @@ def rank_phenomena(phenomena: list) -> list:
         row.update(unsp)
         row["falsification_ladder"] = falsification_ladder(p)
         rows.append(row)
-    rows.sort(key=lambda r: r["unspoken_tac"}, reverse=True)
+    rows.sort(key=lambda r: r["unspoken_tac"], reverse=True)
     for i, r in enumerate(rows, 1):
         r["rank_unspoken"] = i
     return rows
